@@ -46,7 +46,6 @@ def game_over(cur_s):
 
 a = sign()
 current_sign = next(a)
-turn = 0
 pr_gf()
 
 while  True:
