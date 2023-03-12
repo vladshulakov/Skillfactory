@@ -1,5 +1,13 @@
 game_field = ([' ', 0, 1, 2], [0, '-', '-', '-'], [1, '-', '-', '-'], [2, '-', '-', '-'])
 
+def greetings():
+    print('---------------')
+    print('  Приветствую  ')
+    print('  вас в игре   ')
+    print('крестики-нолики')
+    print('---------------')
+    print('\n')
+
 def pr_gf():
     for i in range(len(game_field)):
         print(*game_field[i], sep=' | ')
@@ -47,14 +55,15 @@ def game_over(cur_s):
 
 a = sign()
 current_sign = next(a)
+greetings()
 pr_gf()
 
 while  True:
     
 
-    while (x := input(f'Ходит {current_sign} введите координату по Х от 0 до 2: ')) not in ['0', '1', '2']:
+    while (x := input(f'Ходит {current_sign} введите координату по горизонтали от 0 до 2: ')) not in ['0', '1', '2']:
         print('Неподходящая координата')
-    while (y := input(f'Ходит {current_sign} введите координату по Y от 0 до 2: ')) not in ['0', '1', '2']:
+    while (y := input(f'Ходит {current_sign} введите координату по вертикали от 0 до 2: ')) not in ['0', '1', '2']:
         print('Неподходящая координата')
     if game_field[int(y) + 1][int(x) + 1] != '-':
         print('Данная координата уже занята, введите другое значение')
