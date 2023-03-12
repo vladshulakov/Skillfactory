@@ -2,7 +2,8 @@ game_field = ([' ', 0, 1, 2], [0, '-', '-', '-'], [1, '-', '-', '-'], [2, '-', '
 
 def pr_gf():
     for i in range(len(game_field)):
-        print(*game_field[i])
+        print(*game_field[i], sep=' | ')
+        print('--------------')
 
 
 def coords(x,y, sign):
